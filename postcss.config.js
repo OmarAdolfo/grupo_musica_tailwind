@@ -10,6 +10,7 @@ module.exports = {
         "hexadecimal-alpha-notation": true,
         "place-properties": true
       }
-    })
+    }),
+    require("tailwindcss")("./tailwind.config.js")
   ]
 };
