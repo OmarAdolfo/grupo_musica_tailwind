@@ -1,5 +1,31 @@
-body {
-  padding: 30px;
-  margin: 0;
-  background-color: lighten($uoc-masterbrand, 25%);
+.input-form {
+  @apply w-full border border-gray px-3 py-2 rounded;
+}
+
+.input-form:focus {
+  @apply shadow-xl;
+}
+
+.btn {
+  @apply py-2 px-4 rounded;
+}
+
+.btn-primary {
+  @apply bg-gray text-white;
+}
+
+.member-photo {
+  @apply w-full h-64 object-cover mb-6 shadow rounded;
+}
+
+.member-name {
+  @apply font-hairline text-gray text-3xl;
+}
+
+.member-rol {
+  @apply text-gray;
+}
+
+.member-info {
+  @apply text-justify mt-5;
 }

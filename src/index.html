@@ -9,21 +9,146 @@
   <title>UOC Boilerplate</title>
 </head>
 
-<body>
-  <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-    <div class="sm:flex sm:items-center px-6 py-4">
-      <img class="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full"
-        src="https://randomuser.me/api/portraits/women/17.jpg" alt="Woman's Face">
-      <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
-        <p class="text-xl leading-tight">Erin Lindford</p>
-        <p class="text-sm leading-tight text-gray-600">Customer Support Specialst</p>
-        <div class="mt-4">
-          <button
-            class="text-purple-500 hover:text-white hover:bg-purple-500 border border-purple-500 text-xs font-semibold rounded-full px-4 py-1 leading-normal">Message</button>
+<body class="flex flex-col p-0 m-0 min-h-screen font-body">
+  <header class="border-b-7 border-black bg-gray">
+    <nav class="flex p-4">
+      <div class="flex-grow justify-start">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logo-hip-hop-white.png" width="60" height="60" alt="Logo de la página">
+        </a>
+      </div>
+      <div class="flex-grow items-center m-auto">
+        <ul class="flex justify-end">
+          <li class="mr-6">
+            <a class="text-white hover:text-yellow" href="band-members.html">Miembros</a>
+          </li>
+          <li class="mr-6">
+            <a class="text-white hover:text-yellow" href="index.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-auto pb-40">
+    <div class="container mx-auto mt-10">
+      <div class="text-center text-4xl mb-2">
+        Únete a nuestro grupo de música
+      </div>
+      <form name="contact" method="POST" data-netlify="true">
+        <div class="flex flex-wrap items-center">
+          <div class="w-full md:w-2/12">
+            <label class="p-3" for="name">
+              Nombre
+            </label>
+          </div>
+          <div class="w-full md:w-10/12 p-3">
+            <input id="name" name="nombre" type="text" class="input-form" required>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full md:w-2/12">
+            <label class="p-3" for="name">
+              Email
+            </label>
+          </div>
+          <div class="w-full md:w-10/12 p-3">
+            <input id="email" name="email" type="email" class="input-form" required>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full md:w-2/12">
+            <label class="p-3" for="name">
+              Elige tu rol
+            </label>
+          </div>
+          <div class="w-full md:w-10/12 p-3">
+            <select class="input-form" id="inlineFormCustomSelect" name="rol" required>
+              <option value="Cantante">Cantante</option>
+              <option value="Productor">Productor</option>
+              <option value="Mánager">Mánager</option>
+              <option value="CreadorMezclas">Creador de mezclas</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full md:w-2/12">
+            <label class="p-3" for="name">
+              Otras observaciones
+            </label>
+          </div>
+          <div class="w-full md:w-10/12 p-3">
+            <textarea class="input-form" name="otros-datos" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full md:w-2/12">
+          </div>
+          <div class="w-full md:w-10/12 p-3">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="bg-yellow border-t-7 border-black text-center p-3">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-1/2 mb-4">
+          <div class="text-2xl">
+            Contacto
+          </div>
+          <div>
+            <b>Teléfono:</b> 612 345 678
+          </div>
+          <div>
+            <b>Email:</b> grupomusica@gmail.com
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 mb-4">
+          <div class="text-2xl">
+            Únete
+          </div>
+          <p class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl leading-normal text-justify mx-auto my-6">
+            No dudes en unirte a nuestro peculiar grupo de
+            música y acompañarnos a
+            convertirnos en
+            unos de los
+            mejores grupos nacionales</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-6">
+        <div class="w-full md:w-1/3 flex justify-center mb-4">
+          <a href="index.html">
+            <img src="../src/assets/images/logo-hip-hop-black.png" width="60" height="60" alt="Logo de la página">
+          </a>
+        </div>
+        <div class="w-full md:w-1/3 items-center m-auto mb-4">
+          <ul class="flex justify-center">
+            <li class="mr-6">
+              <a class="text-gray" href="band-members.html">Miembros</a>
+            </li>
+            <li class="mr-6">
+              <a class="text-gray" href="index.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/3 items-center m-auto mb-4">
+          <ul class="flex justify-center">
+            <li class="mr-6">
+              <a class="text-gray" href="#"><i class="fab fa-google-plus-g fa-2x"></i></a>
+            </li>
+            <li class="mr-6">
+              <a class="text-gray" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </li>
+            <li class="mr-6">
+              <a class="text-gray" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
